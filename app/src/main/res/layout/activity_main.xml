@@ -1,22 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.vicukosingleapp.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="368dp"
-        android:layout_height="551dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/Header"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description:"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/description_content"
+            android:layout_below="@id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="After thinking it over for several months I made the decision to leave my job and travel around the world."
+            android:textColor="@android:color/black"
+            android:textStyle="italic"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingRight="16dp">
+
+                <ImageView
+                android:id="@+id/fox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/Fox"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:paddingLeft="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/YouTube" />
+
+                    <TextView
+                        android:layout_weight="6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="youtube.com/vicuki"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/Facebook"/>
+
+                    <TextView
+                        android:layout_weight="6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="facebook.com/ivicuko"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/Twitter"/>
+
+                    <TextView
+                        android:layout_weight="6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="twitter.com/vicuko"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/Email"/>
+
+                    <TextView
+                        android:layout_weight="6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="vicukoyt@gmail.com"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Follow me to keep living new adventures, experiences and challenges"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="#FF9800"
+            android:textStyle="bold"
+            android:fontFamily="casual"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="Made with"
+                android:gravity="center_vertical"
+                android:textAlignment="viewEnd"
+                android:textColor="#01579B"
+                android:textStyle="italic"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/Heart"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="in Udacity"
+                android:gravity="center_vertical"
+                android:textAlignment="viewStart"
+                android:textColor="#01579B"
+                android:textStyle="italic"/>
+        </LinearLayout>
     </RelativeLayout>
-</RelativeLayout>
+</LinearLayout>
