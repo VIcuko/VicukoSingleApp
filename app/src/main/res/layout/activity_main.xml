@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,14 +8,17 @@
     tools:context="com.example.android.vicukosingleapp.MainActivity">
 
     <ImageView
+        android:contentDescription="Header Vicuko"
         android:id="@+id/header"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:src="@drawable/header"/>
 
     <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_below="@id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -24,19 +27,18 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/description"
             android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description:"
+            android:textSize="18sp"
             android:textColor="@android:color/black"
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/description_content"
-            android:layout_below="@id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="14sp"
             android:text="After thinking it over for several months I made the decision to leave my job and travel around the world."
             android:textColor="@android:color/black"
             android:textStyle="italic"
@@ -53,10 +55,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:orientation="vertical"
-                android:paddingRight="16dp">
+                android:paddingRight="16dp"
+                android:paddingEnd="16dp">
 
                 <ImageView
-                android:id="@+id/fox"
+                android:contentDescription="Vicuko fox icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
@@ -88,7 +91,7 @@
                         android:layout_weight="6"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:textSize="15sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="10dp"
@@ -113,7 +116,7 @@
                         android:layout_weight="6"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:textSize="15sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="10dp"
@@ -138,7 +141,7 @@
                         android:layout_weight="6"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:textSize="15sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="10dp"
@@ -163,7 +166,7 @@
                         android:layout_weight="6"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:textSize="15sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="10dp"
@@ -173,7 +176,7 @@
         </LinearLayout>
 
         <TextView
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Follow me to keep living new adventures, experiences and challenges"
@@ -184,43 +187,40 @@
             android:fontFamily="casual"/>
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_below="@id/main_content"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:text="Made with"
+            android:gravity="center_vertical"
+            android:textAlignment="viewEnd"
+            android:textColor="#01579B"
+            android:textStyle="italic"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="Made with"
-                android:gravity="center_vertical"
-                android:textAlignment="viewEnd"
-                android:textColor="#01579B"
-                android:textStyle="italic"/>
+        <ImageView
+            android:contentDescription="Heart for footer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/heart"
+            android:layout_centerHorizontal="true"/>
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="20dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:gravity="center_vertical"
-                android:src="@drawable/heart"
-                android:layout_centerHorizontal="true"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="in Udacity"
-                android:gravity="center_vertical"
-                android:textAlignment="viewStart"
-                android:textColor="#01579B"
-                android:textStyle="italic"/>
-        </LinearLayout>
-    </RelativeLayout>
-</LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:text="in Udacity"
+            android:gravity="center_vertical"
+            android:textAlignment="viewStart"
+            android:textColor="#01579B"
+            android:textStyle="italic"/>
+    </LinearLayout>
+</RelativeLayout>
