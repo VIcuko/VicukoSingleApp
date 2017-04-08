@@ -95,8 +95,6 @@
                         android:textStyle="bold"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="10dp"
-                        android:autoLink="web"
-                        android:linksClickable="true"
                         android:text="youtube.com/vicuki"/>
 
                 </LinearLayout>
@@ -122,8 +120,6 @@
                         android:textStyle="bold"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="10dp"
-                        android:autoLink="web"
-                        android:linksClickable="true"
                         android:text="facebook.com/ivicuko"/>
 
                 </LinearLayout>
@@ -149,8 +145,6 @@
                         android:textStyle="bold"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="10dp"
-                        android:autoLink="web"
-                        android:linksClickable="true"
                         android:text="twitter.com/vicuko"/>
 
                 </LinearLayout>
@@ -176,8 +170,6 @@
                         android:textStyle="bold"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="10dp"
-                        android:autoLink="web"
-                        android:linksClickable="true"
                         android:text="vicukoyt@gmail.com"/>
                 </LinearLayout>
             </LinearLayout>
