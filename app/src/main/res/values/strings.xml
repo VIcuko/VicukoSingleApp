@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">VicukoSingleApp</string>
+    <string name="fox_icon">Vicuko fox icon</string>
+    <string name="header_description">Header Vicuko</string>
+    <string name="description">Description:</string>
+    <string name="description_text">After thinking it over for several months I made the decision to leave my job and travel around the world.</string>
+    <string name="youtube_link">youtube.com/vicuki</string>
+    <string name="facebook_link">facebook.com/ivicuko</string>
+    <string name="twitter_link">twitter.com/vicuko</string>
+    <string name="email">vicukoyt@gmail.com</string>
+    <string name="story">Follow me to keep living new adventures, experiences and challenges</string>
+    <string name="footer1">Made with</string>
+    <string name="heart_image_description">Heart for footer</string>
+    <string name="footer2">in Udacity</string>
+
+
 </resources>
